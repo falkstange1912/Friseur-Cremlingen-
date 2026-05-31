@@ -1,0 +1,8 @@
+{
+  "name": "Atelier - High-End Salon",
+  "description": "Minimalistische und elegante Website für einen Friseursalon, basierend auf redaktionellem Design, mit Fokus auf das Team.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
