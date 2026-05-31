@@ -35,7 +35,7 @@ export default function App() {
         {/* INTERIOR PHOTO 1 */}
         <div className="lg:col-span-7">
           <img 
-            src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            src="/IMG_2975.jpg" 
             alt="Helles, offenes Salon-Interior" 
             className="w-full h-[600px] md:h-[800px] object-cover shadow-2xl shadow-[#E8E3DA]/50"
           />
@@ -74,7 +74,7 @@ export default function App() {
         {/* INTERIOR PHOTO 2 */}
         <div className="lg:col-span-6 relative">
            <img 
-            src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            src="/IMG_2976.jpg" 
             alt="Entspannte Lounge-Ecke im Salon" 
             className="w-full h-[700px] object-cover"
           />
@@ -111,7 +111,7 @@ export default function App() {
               <Clock className="w-6 h-6 text-[#C5A880] mt-1 flex-shrink-0" />
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-bold mb-2">Öffnungszeiten</p>
-                <p className="text-[#4A4A4A] italic">Hier können später die exakten Öffnungszeiten ergänzt werden.</p>
+                <p className="text-[#4A4A4A] italic">Bitte rufen Sie uns für Ihre Terminplanung an.</p>
               </div>
             </div>
           </div>
