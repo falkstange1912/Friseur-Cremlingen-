@@ -1,93 +1,126 @@
-import { MapPin, Phone, Scissors, Coffee, Smile, Armchair } from 'lucide-react';
+import { MapPin, Phone, Coffee, Scissors, Clock } from 'lucide-react';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 font-sans">
+    <div className="min-h-screen bg-[#FDFBF7] text-[#222222] font-sans selection:bg-[#C5A880] selection:text-[#FDFBF7]">
       
       {/* HEADER */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3 text-amber-700">
-            <Scissors className="w-6 h-6" />
-            <h1 className="text-xl font-bold tracking-tight">Schnitt & Frisuren Shop</h1>
+      <header className="fixed top-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#E8E3DA]">
+        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+          <div className="font-serif text-2xl tracking-wide text-[#222222]">
+            Schnitt & Frisuren Shop
           </div>
+          <a href="#kontakt" className="hidden md:inline-block text-xs uppercase tracking-[0.2em] font-semibold text-[#222222] hover:text-[#C5A880] transition-colors">
+            Termin vereinbaren
+          </a>
         </div>
       </header>
 
-      {/* HERO */}
-      <section className="bg-stone-100 py-24 px-4 text-center border-b border-stone-200">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold text-stone-800 mb-6 tracking-tight">
-            Ihr Friseur für die <span className="text-amber-700">ganze Familie</span>
-          </h2>
-          <p className="text-lg md:text-xl text-stone-600 mb-8 leading-relaxed">
-            Seit 20 Jahren nimmt sich unser geschultes Team Zeit für eine ausführliche Beratung und Ihre individuellen Wünsche.
+      {/* HERO / EDITORIAL SECTION 1 */}
+      <section className="pt-40 pb-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-0 items-center">
+        <div className="lg:col-span-5 relative z-10 lg:-mr-12">
+          <p className="text-[#C5A880] uppercase tracking-[0.3em] text-xs font-bold mb-6">Seit 20 Jahren</p>
+          <h1 className="font-serif text-5xl md:text-7xl text-[#222222] mb-8 leading-[1.1]">
+            Ihr Friseur für die <br />
+            <span className="italic text-[#C5A880]">ganze Familie.</span>
+          </h1>
+          <p className="text-[#4A4A4A] text-lg leading-relaxed mb-10 max-w-md">
+            Unser geschultes Team nimmt sich Zeit für eine ausführliche Beratung und Ihre individuellen Wünsche. Ein Ruhepol, an dem Handwerk auf Ästhetik trifft.
           </p>
+          <a href="#kontakt" className="inline-block bg-[#222222] text-[#FDFBF7] px-10 py-4 uppercase tracking-[0.2em] text-xs font-semibold hover:bg-[#C5A880] transition-colors">
+            Anrufen & Entspannen
+          </a>
         </div>
-      </section>
-
-      {/* INFOS & SALON */}
-      <section className="py-24 px-4 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12">
-          
-          <div className="space-y-8">
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-stone-100">
-              <h3 className="text-2xl font-bold text-stone-800 mb-4 flex items-center gap-2">
-                <Armchair className="w-6 h-6 text-amber-600" /> Ausstattung
-              </h3>
-              <p className="text-stone-600 leading-relaxed">
-                Wir bieten viel Platz mit insgesamt <strong>9 Bedienplätzen</strong>, <strong>3 sehr bequemen Rückwärtswaschbecken</strong> und einem klassischen Vorwärtswaschplatz.
-              </p>
-            </div>
-
-            <div className="bg-amber-50 p-8 rounded-3xl border border-amber-100">
-              <h3 className="text-2xl font-bold text-stone-800 mb-4 flex items-center gap-2">
-                <Smile className="w-6 h-6 text-amber-600" /> Für die Kleinen
-              </h3>
-              <p className="text-stone-600 leading-relaxed">
-                Ein besonderes Erlebnis: Unsere kleinen Kunden können auf einem <strong>original Pferdesattel</strong> die Haare geschnitten bekommen.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100 flex flex-col justify-center text-center">
-            <Coffee className="w-16 h-16 text-amber-600 mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-stone-800 mb-4">Entspannen & Genießen</h3>
-            <p className="text-stone-600 leading-relaxed mb-6">
-              Lassen Sie sich in entspannter Atmosphäre verwöhnen. Genießen Sie unsere leckeren Kaffeespezialitäten und lehnen Sie sich einfach zurück.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* KONTAKT */}
-      <section className="bg-stone-900 text-stone-300 py-24 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Gerne erwarten wir Ihren Anruf</h2>
         
-        <div className="max-w-2xl mx-auto grid sm:grid-cols-2 gap-8">
-          <div className="bg-stone-800 p-8 rounded-3xl flex flex-col items-center gap-4">
-            <MapPin className="w-8 h-8 text-amber-500" />
-            <div>
-              <p className="font-bold text-white text-lg mb-1">Schnitt & Frisuren Shop</p>
-              <p>Hauptstraße 43</p>
-              <p>38162 Cremlingen</p>
+        {/* INTERIOR PHOTO 1 */}
+        <div className="lg:col-span-7">
+          <img 
+            src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+            alt="Helles, offenes Salon-Interior" 
+            className="w-full h-[600px] md:h-[800px] object-cover shadow-2xl shadow-[#E8E3DA]/50"
+          />
+        </div>
+      </section>
+
+      {/* TEXT ZONE - MAGAZINE LAYOUT */}
+      <section className="py-32 bg-[#E8E3DA]/30 border-y border-[#E8E3DA]">
+        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+          <div>
+            <h2 className="font-serif text-3xl md:text-4xl text-[#222222] mb-6">Raum für Entfaltung.</h2>
+            <p className="text-[#4A4A4A] leading-relaxed mb-8">
+              Lassen Sie sich in unserer entspannten Loft-Atmosphäre verwöhnen. Mit <strong>9 Bedienplätzen</strong>, <strong>3 bequemen Rückwärtswaschbecken</strong> und einem klassischen Vorwärtswaschplatz bieten wir viel Freiraum für Ihren Besuch.
+            </p>
+            <div className="flex items-center gap-4 text-[#C5A880]">
+              <Coffee className="w-6 h-6" />
+              <span className="text-[#222222] font-medium tracking-wide">Genießen Sie unsere Kaffeespezialitäten.</span>
             </div>
           </div>
+          <div>
+             <h2 className="font-serif text-3xl md:text-4xl text-[#222222] mb-6">Für unsere kleinen Gäste.</h2>
+             <p className="text-[#4A4A4A] leading-relaxed mb-8">
+              Ein Friseurbesuch soll ein Erlebnis sein. Daher können unsere kleinen Kunden auf einem <strong>original Pferdesattel</strong> Platz nehmen und sich stressfrei die Haare schneiden lassen.
+            </p>
+            <div className="flex items-center gap-4 text-[#C5A880]">
+              <Scissors className="w-6 h-6" />
+              <span className="text-[#222222] font-medium tracking-wide">Erfahrung & Geduld für jedes Alter.</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="bg-stone-800 p-8 rounded-3xl flex flex-col items-center gap-4">
-            <Phone className="w-8 h-8 text-amber-500" />
-            <div>
-              <p className="font-bold text-white text-lg mb-1">Telefon</p>
-              <p className="text-xl">(+49) 05306 912188</p>
+      {/* EDITORIAL SECTION 2 & FUNCTIONAL ZONE */}
+      <section id="kontakt" className="py-32 px-6 max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+        
+        {/* INTERIOR PHOTO 2 */}
+        <div className="lg:col-span-6 relative">
+           <img 
+            src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+            alt="Entspannte Lounge-Ecke im Salon" 
+            className="w-full h-[700px] object-cover"
+          />
+          <div className="absolute -bottom-8 -right-8 bg-[#FDFBF7] p-8 border border-[#E8E3DA] hidden md:block">
+            <p className="font-serif text-2xl text-[#222222] italic">Wohlfühlen.</p>
+          </div>
+        </div>
+
+        {/* FUNCTIONAL ZONE (Buchung & Info) */}
+        <div className="lg:col-span-6 lg:pl-10">
+          <h2 className="font-serif text-4xl md:text-5xl text-[#222222] mb-12">Kontakt & <br/>Öffnungszeiten</h2>
+          
+          <div className="space-y-10">
+            <div className="flex items-start gap-6">
+              <MapPin className="w-6 h-6 text-[#C5A880] mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-bold mb-2">Adresse</p>
+                <p className="text-[#222222] text-lg font-medium">Schnitt & Frisuren Shop</p>
+                <p className="text-[#4A4A4A]">Hauptstraße 43</p>
+                <p className="text-[#4A4A4A]">38162 Cremlingen</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6">
+              <Phone className="w-6 h-6 text-[#C5A880] mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-bold mb-2">Terminvereinbarung</p>
+                <p className="text-[#222222] text-2xl font-serif">(+49) 05306 912188</p>
+                <p className="text-[#4A4A4A] mt-2">Gerne erwarten wir Ihren Anruf.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6 pt-6 border-t border-[#E8E3DA]">
+              <Clock className="w-6 h-6 text-[#C5A880] mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-bold mb-2">Öffnungszeiten</p>
+                <p className="text-[#4A4A4A] italic">Hier können später die exakten Öffnungszeiten ergänzt werden.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-stone-950 text-stone-500 py-8 text-center text-sm">
-        <p>© {new Date().getFullYear()} Schnitt & Frisuren Shop.</p>
+      <footer className="bg-[#222222] text-[#E8E3DA] py-12 text-center text-xs uppercase tracking-[0.2em]">
+        <p>© {new Date().getFullYear()} Schnitt & Frisuren Shop – Cremlingen</p>
       </footer>
 
     </div>
